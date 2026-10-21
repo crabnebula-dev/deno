@@ -5,7 +5,7 @@ use deno_core::Extension;
 use deno_core::extension;
 
 #[cfg(not(feature = "ffi"))]
-extension!(deno_ffi, esm = ["00_ffi.js"]);
+extension!(deno_ffi, lazy_loaded_js = ["00_ffi.js"]);
 
 extension!(runtime,
   deps = [
